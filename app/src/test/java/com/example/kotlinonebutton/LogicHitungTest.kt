@@ -22,9 +22,21 @@ class LogicHitungTest {
     }
 
     @Test
+    fun testAddNegative(){
+        val result = logicHitung.add(a, -15.0)
+        assertEquals(-10.0, result, 0.0)
+    }
+
+    @Test
     fun testDecrement() {
         val result = logicHitung.decrement(a, b)
         assertEquals(2.0, result, tolerance)
+    }
+
+    @Test
+    fun testDecrementtoNegative(){
+        val result = logicHitung.decrement(b, a)
+        assertEquals(-2.0, result, 0.0)
     }
 
     @Test
